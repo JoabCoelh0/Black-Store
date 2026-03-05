@@ -39,14 +39,18 @@ body{
     list-style: none;
 }
 
+#cabecalho > #menu > ul > li > a {
+    text-decoration:  none;
+
+    color: #141414;
+}
+
 #cabecalho > #area-shop{
     width: 9%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
-
 
 #cabecalho > #area-shop > #img-user > div{
     width: 40px;
@@ -65,4 +69,35 @@ body{
 
 #cabecalho > #area-shop > #icon > i{
     font-size: 22px;
+}
+
+#anuncios{
+    width: 100vw;
+    height: 80vh;
+}
+
+main{
+    width: 95vw;
+    height: 100vh;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 15px;
+    margin: auto    ;
+}
+
+main > #filtro {
+    width: 20%;
+    height: 100%;
+}
+
+main > #filtro > #header-filtro{
+    margin-bottom: 10px;
+}
+
+main > #filtro > #chekout{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
