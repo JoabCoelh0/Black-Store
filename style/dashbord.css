@@ -39,6 +39,12 @@ body{
     list-style: none;
 }
 
+#cabecalho > #menu > ul > li > a {
+    text-decoration:  none;
+
+    color: #141414;
+}
+
 #cabecalho > #area-shop{
     width: 9%;
     display: flex;
