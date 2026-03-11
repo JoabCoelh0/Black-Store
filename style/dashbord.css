@@ -28,6 +28,7 @@ body{
 
 #cabecalho > #menu{
     width: 80%;
+    display: flex;
     
 }
 
@@ -79,10 +80,11 @@ body{
 main{
     width: 95vw;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 15px;
-    margin: auto    ;
+    margin: auto;
+    display: flex;
 }
 
 main > #filtro {
@@ -100,4 +102,62 @@ main > #filtro > #chekout{
     margin: auto;
     display: flex;
     flex-direction: column;
+}
+
+main > #produtos{
+    width: 80%;
+}
+
+main > #produtos > #section-produtos > .produto{
+    width: 25%;
+}
+
+
+main > #produtos > #section-produtos > .produto > .descricao-produto >.title-produto {
+    font-size: 1em;
+}
+
+
+main > #produtos > #section-produtos > .produto > .descricao-produto > .preco{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+main > #produtos > #section-produtos > .produto > .botao > .add-carrinho{
+    width: 49%;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid #c0c0c0;
+    background-color: white;
+    color: #868686;
+}
+
+main > #produtos > #section-produtos > .produto > .botao > .add-carrinho:hover{
+    background-color: #ececec;
+    cursor: pointer;
+}
+
+main > #produtos > #section-produtos > .produto > .botao > .comprar{
+    width: 49%;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid #000000;
+    color: white;
+    background-color: #000000;
+
+}
+
+main > #produtos > #section-produtos > .produto > .botao > .comprar:hover{
+    background-color: #141414;
+    cursor: pointer;
+}
+
+
+main > #produtos > #section-produtos > .produto > .img-produto{
+    margin: 5px 0;
+}
+
+
+main > #produtos > #section-produtos > .produto > .descricao-produto > .title-produto, .preco{
+    margin: 5px 0;
 }
