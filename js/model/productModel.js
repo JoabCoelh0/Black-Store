@@ -8,7 +8,6 @@ export async function buscasProdutos(){
         }
 
         const dados = await response.json()
-        console.log(dados);
         
         return dados 
         
