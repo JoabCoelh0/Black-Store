@@ -1,9 +1,54 @@
 import { carregarProdutos } from "../controller/productController.js"
 
-const sectionProdutos =  document.querySelector('#section-produtos')
+const dados = await carregarProdutos() 
+function rederDados(){
+    const sectionProdutos = document.querySelector('#section-produtos')
+    
+    try {
 
-const produtos = await carregarProdutos()
-for(let p of Object.values(produtos)){
-    console.log(p);
+        for(let dadosProdutos of dados){
+
+            const divProduto = document.createElement('div')
+            divProduto.classList.add('produto')
+            
+            const produto = {
+                imagemProduto: dadosProdutos.image,
+                nomeProduto: dadosProdutos.title,
+                precoProduto: dadosProdutos.price
+            }
+            
+            divProduto.innerHTML = `   <div class="img-produto">
+                            <img src="${produto.imagemProduto}" alt="" srcset="">
+                        </div>
+                        <div class="descricao-produto">
+
+                            <h3 class="title-produto">
+                                ${produto.nomeProduto}
+                            </h3>
+                            
+                            <h4 class="preco">
+                                R$ ${produto.precoProduto}
+                            </h4>
+
+                        </div>
+
+                        <div class="botao">
+                            <button class="add-carrinho"> 
+                                Adicionar ao carrinho   
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+
+                            <button class="comprar">Comprar agora</button>
+                        </div>`
+            
+            sectionProdutos.appendChild(divProduto)
+        }
+    } catch (error) {
+        console.error(`${error.message}`);
+        
+    }
+   
 }
+
+ rederDados()
 

@@ -108,10 +108,33 @@ main > #produtos{
     width: 80%;
 }
 
-main > #produtos > #section-produtos > .produto{
-    width: 25%;
+main > #produtos > #header-produtos > h1{
+    font-weight: 700;
+    margin-bottom: 50px;    
+} 
+
+main > #produtos > #section-produtos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
+main > #produtos > #section-produtos > .produto{
+    width: 80%;
+}
+
+main > #produtos > #section-produtos > .produto > .img-produto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main > #produtos > #section-produtos > .produto > .img-produto > img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
 
 main > #produtos > #section-produtos > .produto > .descricao-produto >.title-produto {
     font-size: 1em;
