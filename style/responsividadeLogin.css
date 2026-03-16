@@ -1,0 +1,25 @@
+@media (max-width: 1200px) {
+    #container-login{
+        width: 40vw;
+    }
+}
+
+
+@media (max-width: 998px) {
+    #container-login{
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #container-login{
+        width: 60vw;
+    }
+}
+
+
+@media (max-width: 575px) {
+    #container-login{
+        width: 100vw;
+    }
+}
