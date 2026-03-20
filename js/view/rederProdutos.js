@@ -17,28 +17,26 @@ function rederDados(){
                 precoProduto: dadosProdutos.price
             }
             
-            divProduto.innerHTML = `   <div class="img-produto">
-                            <img src="${produto.imagemProduto}" alt="" srcset="">
-                        </div>
-                        <div class="descricao-produto">
+            divProduto.innerHTML = 
+                        `<div class="card-produto">
+                            <div class="img-produto">
+                                <img src="${produto.imagemProduto}" alt="${produto.nomeProduto}">
+                            </div>
 
-                            <h3 class="title-produto">
-                                ${produto.nomeProduto}
-                            </h3>
-                            
-                            <h4 class="preco">
-                                R$ ${produto.precoProduto}
-                            </h4>
+                            <div class="descricao-produto">
+                                <h3 class="title-produto">${produto.nomeProduto}</h3>
+                                <h4 class="preco">R$ ${produto.precoProduto}</h4>
+                            </div>
 
-                        </div>
-
-                        <div class="botao">
-                            <button class="add-carrinho"> 
-                                Adicionar ao carrinho   
+                            <div class="botao">
+                                <button class="add-carrinho">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-
-                            <button class="comprar">Comprar agora</button>
+                                Adicionar ao carrinho
+                                </button>
+                                <button class="comprar">
+                                Comprar agora
+                                </button>
+                            </div>
                         </div>`
             
             sectionProdutos.appendChild(divProduto)
