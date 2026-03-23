@@ -1,3 +1,24 @@
+/*Header*/
+@media (max-width: 480px) {
+  .card-produto {
+    width: 100%;         
+  }
+
+  .lista-produtos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Main*/
+
 @media (max-width: 1200px) {
     #container-login{
         width: 40vw;
@@ -22,4 +43,31 @@
     #container-login{
         width: 100vw;
     }
+}
+
+/*Footer*/
+@media (max-width: 768px) {
+  .rodape-topo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rodape-marca {
+    grid-column: 1 / -1;
+  }
+
+  .rodape-base {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape-topo {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape {
+    padding: 32px 20px 20px;
+  }
 }

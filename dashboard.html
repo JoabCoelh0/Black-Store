@@ -11,34 +11,42 @@
     <title>dashboard</title>
 </head>
 <body>
-    <header id="cabecalho">
-        <div id="logo-empresa">
-            <img src="assets/img/Logomarca.png" alt="Logo Empresa" width="80px">
-        </div>
+    <header class="cabecalho">
+ 
+    <div class="logo">
+    
+        <img src="assets/img/Logomarca.png" alt="logo-empresa" width="80px">
 
-        <nav id="menu">
-            <ul>
-                <li><a href="#">Lançamentos</a></li>
-                <li><a href="#">Loja</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-
-        <div id="area-shop">
-            <div id="icon">
-               <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-
-            <div id="img-user">
-                <div></div>
-            </div>
-        </div>
-    </header>
-
+    </div>
+ 
+    <nav class="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="#">Lançamentos</a></li>
+        <li><a href="#">Loja</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+ 
+    <div class="area-shop">
+      <button class="btn-carrinho" aria-label="Abrir carrinho de compras">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="badge" aria-hidden="true"></span>
+      </button>
+ 
+      <div class="avatar" role="img" aria-label="Avatar do usuário">J</div>
+    </div>
+ 
+  </header>
 
     <section id="anuncios">
-       
+        <div id="anuncio">
+            <img src="assets/img/Fundo.jpg" alt="">
+        </div>
     </section>
 
     <main>
@@ -72,8 +80,85 @@
             </div>
         </section>
     </main>
-</body>
+    <footer class="rodape">
+ 
+    <div class="rodape-topo">
+ 
+      <div class="rodape-marca">
+        <div class="logo">
 
+          <img src="assets/img/Logomarca.png" alt="logo-empresa" width="90px">
+
+        </div>
+        <p class="rodape-desc">Sua loja de moda com os melhores lançamentos e ofertas exclusivas.</p>
+        <div class="redes">
+
+          <button class="btn-rede" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <button class="btn-rede" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4l16 16M4 20L20 4"/>
+            </svg>
+          </button>
+
+          <button class="btn-rede" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="rodape-col">
+        <h4>Loja</h4>
+        <ul>
+          <li><a href="#">Lançamentos</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Mais vendidos</a></li>
+          <li><a href="#">Coleções</a></li>
+        </ul>
+      </div>
+ 
+      <div class="rodape-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+ 
+      <div class="rodape-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Rastrear pedido</a></li>
+          <li><a href="#">Fale conosco</a></li>
+        </ul>
+      </div>
+ 
+    </div>
+ 
+    <div class="rodape-base">
+      <span class="rodape-copy">© 2026 Black Store. Todos os direitos reservados.</span>
+      <nav class="rodape-legal" aria-label="Links legais">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Cookies</a>
+      </nav>
+    </div>
+ 
+  </footer>
+    
+</body>
 <script type="module" src="js/view/produtosView.js"></script>
 <script type="module" src="js/view/rederProdutos.js"></script>
 </html>
