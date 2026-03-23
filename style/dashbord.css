@@ -4,77 +4,161 @@
     box-sizing: border-box;
     font-family: var(--font-principal);
     font-weight: var(--font-principal-peso);
-}
-
-body{
-    background-image: url(../assets/img/Fundo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#cabecalho{
-    border-radius: 20px;
-    background-color: white;
-    width: 95%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding: 0px 5px; 
-    box-shadow: 43px 43px 100px #141414,
-             -43px -43px 100px #141414;
-}
-
-#cabecalho > #menu{
-    width: 80%;
-    display: flex;
     
 }
-
-#cabecalho > #menu > ul{
-    width: 40%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
+body{
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+    
+/* ── Cabeçalho ── */
+.cabecalho {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  width: 98%;
+  margin: 24px auto 0;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#cabecalho > #menu > ul > li > a {
-    text-decoration:  none;
-
-    color: #141414;
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-#cabecalho > #area-shop{
-    width: 9%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
 }
 
-#cabecalho > #area-shop > #img-user > div{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(129, 129, 129);
+.logo-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
-#cabecalho > #area-shop > #img-user, #icon{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.logo-nome {
+  font-size: 15px;
+  font-weight: 500;
+  color: #141414;
+  letter-spacing: -0.3px;
 }
 
-#cabecalho > #area-shop > #icon > i{
-    font-size: 22px;
+/* ── Menu ── */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #666;
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: block;
+  transition: background 0.15s, color 0.15s;
+}
+
+.menu ul li a:hover {
+  background-color: #f0f0f0;
+  color: #141414;
+}
+
+/* ── Área do shop ── */
+.area-shop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Botão carrinho ── */
+.btn-carrinho {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 0.15s;
+  color: #141414;
+}
+
+.btn-carrinho svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-carrinho:hover {
+  background-color: #f0f0f0;
+}
+
+.badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #e24b4a;
+}
+
+/* ── Avatar ── */
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ddeeff;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1860a5;
+  cursor: pointer;
+  user-select: none;
 }
 
 #anuncios{
-    width: 100vw;
+    width: 100%;
     height: 80vh;
+    margin: 20px 0px;
+    
+}
+
+#anuncio{
+  width: 98%;
+  height: 100%;
+  margin: auto;
+  
+
+}
+
+#anuncio > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 main{
@@ -82,7 +166,6 @@ main{
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 15px;
-    margin: auto;
     display: flex;
 }
 
@@ -233,7 +316,7 @@ main > #produtos > #section-produtos{
 }
 
 .comprar:hover {
-  background: #085041;
+  background: #390850;
 }
 
 .comprar:active {
@@ -248,20 +331,158 @@ main > #produtos > #section-produtos{
 }
 
 
-@media (max-width: 480px) {
-  .card-produto {
-    width: 100%;         
-  }
 
-  .lista-produtos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 12px;
-  }
+
+/*Footer*/
+
+.rodape {
+  background-color: #ffffff;
+  border-top: 1px solid #e8e8e8;
+  border-radius: 16px 16px 0 0;
+  width: 99%;
+  margin: 20px 0px 0px 0px;
+  padding: 48px 32px 24px;
+  
 }
 
-@media (max-width: 320px) {
-  .lista-produtos {
-    grid-template-columns: 1fr;
-  }
+/* ── Topo: colunas ── */
+.rodape-topo {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* ── Coluna da marca ── */
+.rodape-marca {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.logo-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.logo-nome {
+  font-size: 14px;
+  font-weight: 500;
+  color: #141414;
+  letter-spacing: -0.3px;
+}
+
+.rodape-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 220px;
+  margin-left: 15px;
+}
+
+/* ── Redes sociais ── */
+.redes {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  margin-left: 15px;
+}
+
+.btn-rede {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-rede:hover {
+  background-color: #f0f0f0;
+  color: #141414;
+}
+
+.btn-rede svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Colunas de links ── */
+.rodape-col h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #141414;
+  margin-bottom: 14px;
+}
+
+.rodape-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rodape-col ul li a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.rodape-col ul li a:hover {
+  color: #141414;
+}
+
+/* ── Base ── */
+.rodape-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-left: 15px;
+}
+
+.rodape-copy {
+  font-size: 12px;
+  color: #999;
+}
+
+.rodape-legal {
+  display: flex;
+  gap: 16px;
+}
+
+.rodape-legal a {
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.rodape-legal a:hover {
+  color: #666;
 }
