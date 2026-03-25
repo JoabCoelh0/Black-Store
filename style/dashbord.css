@@ -335,7 +335,7 @@ main > #produtos > #section-produtos{
 
 /*Footer*/
 
-.rodape {
+#rodape {
   background-color: #ffffff;
   border-top: 1px solid #e8e8e8;
   border-radius: 16px 16px 0 0;

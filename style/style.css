@@ -38,7 +38,7 @@ body{
   width: 200px;
 }
 
-
+/*Aviso de cadastro*/
 #container-login > #box-aviso{
   width: 100%;
   height: 60px;
@@ -48,6 +48,18 @@ body{
   
 }
 
+/*Aviso de login*/
+#container-login > #box-menssagem{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+} 
+
+#container-login > #box-menssagem > span{
+  display: none;
+  color: red;
+}
 #container-login > #box-aviso> span{
   width: 85%;
   height: 60px;
