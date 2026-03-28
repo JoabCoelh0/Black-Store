@@ -57,7 +57,7 @@ function filtroCategorias(){
     const categorias = document.querySelectorAll('input[name="categoria"]:checked');
     const valores = [...categorias].map(input => input.value);
 
-    let produtosPorCategoria = []
+    let produtosPorCategoria = [];
     for(let item of dados){
 
         const produto = {
@@ -79,7 +79,7 @@ function filtroCategorias(){
     if (valores.length == 0) {
         rederDados(dados)
     }
-    
+
     rederDados(produtosPorCategoria)
 }
 
