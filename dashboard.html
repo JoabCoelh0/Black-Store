@@ -54,19 +54,30 @@
             <div id="header-filtro">
                 <h3>Categoria</h3>
             </div>
-            <div id="chekout">
-                <div class="categorias">
-                    <input type="checkbox" name="Eletronicos" id=""> Eletronicos
-                </div>
-                <div class="categorias">
-                    <input type="checkbox" name="Joias" id=""> Joias
-                </div>
-                <div class="categorias">
-                    <input type="checkbox" name="Roupas Masculinas" id=""> Roupas Masculinas
-                </div>
-                <div class="categorias">
-                    <input type="checkbox" name="Roupas Femininas" id=""> Roupas Femininas 
-                </div>
+            <div id="checkout">
+              <div class="categorias">
+                  <input class="categoria" type="checkbox" name="categoria" id="eletronicos" value="electronics" >
+                  <label for="electronics">Eletrônicos</label>
+              </div>
+
+              <div class="categorias">
+                  <input class="categoria" type="checkbox" name="categoria" id="joias" value="jewelery">
+                  <label for="joias">Joias</label>
+              </div>
+
+              <div class="categorias">
+                  <input class="categoria" type="checkbox" name="categoria" id="roupas-masculinas" value="women's clothing">
+                  <label for="roupas-femininas">Roupas Femininas</label>
+              </div>
+
+              <div class="categorias">
+                  <input class="categoria" type="checkbox" name="categoria" id="roupas-femininas" value="men's clothing">
+                  <label for="roupas-masculinas">Roupas Masculinas</label> 
+              </div>
+
+              <div class="button">
+                  <button class="aplicarFiltro" type="submit">Aplicar</button>
+              </div>
             </div>
             
         </aside>
