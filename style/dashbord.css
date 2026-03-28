@@ -169,25 +169,78 @@ main{
     display: flex;
 }
 
-main > #filtro {
-    width: 15%;
-    height: 100%;
+#filtro {
+  width: 220px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.25rem;
 }
 
-main > #filtro > #header-filtro{
-    margin-bottom: 10px;
+#header-filtro h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-main > #filtro > #chekout{
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+#filtro > #checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#filtro > #checkout >.categorias {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#filtro > #checkout > .categorias input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+#filtro > #checkout > .categorias label {
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+}
+
+#filtro > #checkout > .button {
+  margin-top: 6px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 14px;
+}
+
+#filtro > #checkout > .button > .aplicarFiltro {
+  width: 100%;
+  padding: 9px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+#filtro > #checkout > .button > .aplicarFiltro:hover {
+  background: #f5f5f5;
+}
+
+#filtro > #checkout > .button > .aplicarFiltro:active {
+  transform: scale(0.97);
 }
 
 main > #produtos{
     width: 80%;
+    margin: 0px 20px;
 }
 
 main > #produtos > #header-produtos > h1{
@@ -251,12 +304,13 @@ main > #produtos > #section-produtos{
   color: #1a1a1a;
   line-height: 1.4;
   margin: 0 0 6px 0;
-
+/*
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  */
 }
 
 .preco {

@@ -1,12 +1,13 @@
 import { carregarProdutos } from "../controller/productController.js"
-
 const dados = await carregarProdutos() 
-function rederDados(){
-    const sectionProdutos = document.querySelector('#section-produtos')
+const sectionProdutos = document.querySelector('#section-produtos')
+
+
+function rederDados(produtos){
     
     try {
 
-        for(let dadosProdutos of dados){
+        for(let dadosProdutos of produtos){
 
             const divProduto = document.createElement('div')
             divProduto.classList.add('produto')
@@ -14,7 +15,8 @@ function rederDados(){
             const produto = {
                 imagemProduto: dadosProdutos.image,
                 nomeProduto: dadosProdutos.title,
-                precoProduto: dadosProdutos.price
+                precoProduto: dadosProdutos.price,
+                categoria: dadosProdutos.category
             }
             
             divProduto.innerHTML = 
@@ -40,6 +42,7 @@ function rederDados(){
                         </div>`
             
             sectionProdutos.appendChild(divProduto)
+
         }
     } catch (error) {
         console.error(`${error.message}`);
@@ -48,5 +51,40 @@ function rederDados(){
    
 }
 
- rederDados()
+rederDados(dados)
 
+function filtroCategorias(){
+    const categorias = document.querySelectorAll('input[name="categoria"]:checked');
+    const valores = [...categorias].map(input => input.value);
+
+    let produtosPorCategoria = []
+    for(let item of dados){
+
+        const produto = {
+            imagemProduto: item.image,
+            nomeProduto: item.title,
+            precoProduto: item.price,
+            categoria: item.category
+        }
+            
+        if(valores.includes(produto.categoria)){
+            produtosPorCategoria.push(item)
+        } 
+        
+    }
+    console.log(produtosPorCategoria);
+
+    sectionProdutos.innerHTML = ''
+
+    if (valores.length == 0) {
+        rederDados(dados)
+    }
+    
+    rederDados(produtosPorCategoria)
+}
+
+const btnAplicarFiltro = document.querySelector(".aplicarFiltro")
+btnAplicarFiltro.addEventListener('click',(e)=>{
+    e.preventDefault()
+    filtroCategorias()
+})
