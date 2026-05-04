@@ -9,6 +9,7 @@ form.addEventListener('submit',(e) => {
     e.preventDefault() 
     const emailValido = checaEmail(email.value)
     const senhaValida = senhaCompativeis(email.value, senha.value) 
+
     if(emailValido.success && senhaValida.success){
 
         window.location.href = 'dashboard.html'
