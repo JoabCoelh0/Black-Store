@@ -1,0 +1,66 @@
+
+@media (max-width: 1000px){
+    main{
+        flex-direction: column;
+    }
+
+    #filtro{
+        width: 100%;
+    }
+    #header-filtro{
+        display: none;
+    }
+
+    #filtro > #checkout{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #filtro > #checkout > .button{
+        margin-top: 0px;
+        border-top: none;
+        padding-top: 0px;
+        display: none;
+    }
+
+    #filtro > #checkout > .button > .aplicarFiltro{
+        width: 80px;
+        background-color: #ccc;
+    }
+
+    #checkout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .categorias input[type="checkbox"] {
+        display: none;
+    }
+
+    .categorias label {
+        padding: 8px 20px;
+        border-radius: 999px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        font-size: 14px;
+        background: white;
+        user-select: none;
+        transition: all 0.15s ease;
+    }
+
+    .categorias input[type="checkbox"]:checked + .txt-label{
+        background-color: #111;
+        color: aliceblue;
+        border-color: #111;
+    }
+
+
+
+    main > #produtos{
+        padding-top: 40px;
+        margin: auto;
+    }
+
+}

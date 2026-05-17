@@ -57,6 +57,9 @@ function filtroCategorias(){
     const categorias = document.querySelectorAll('input[name="categoria"]:checked');
     const valores = [...categorias].map(input => input.value);
 
+    console.log(categorias);
+    
+
     let produtosPorCategoria = [];
     for(let item of dados){
 
@@ -71,8 +74,7 @@ function filtroCategorias(){
             produtosPorCategoria.push(item)
         } 
         
-    }
-    console.log(produtosPorCategoria);
+    }   
 
     sectionProdutos.innerHTML = ''
 
@@ -83,8 +85,21 @@ function filtroCategorias(){
     rederDados(produtosPorCategoria)
 }
 
+
+
+
+document.querySelectorAll('.categoria').forEach(div => {
+  div.addEventListener('click', (e) => {
+    e.preventDefault()
+    filtroCategorias()
+  });
+});
+ 
+/*
+
 const btnAplicarFiltro = document.querySelector(".aplicarFiltro")
 btnAplicarFiltro.addEventListener('click',(e)=>{
     e.preventDefault()
     filtroCategorias()
 })
+*/
