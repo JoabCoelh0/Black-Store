@@ -31,3 +31,26 @@ export function liberarAcesso(emailValido, senhaValida){
         window.location.href = 'dashboard.html'
     }
 }*/
+
+
+import { loginComGoogle } from "../service/authService.js";
+
+const btnGoogle = document.querySelector("#btnGoogle");
+
+btnGoogle.addEventListener("click", async () => {
+  try {
+    const user = await loginComGoogle();
+
+    console.log("Usuário logado:", user);
+
+    localStorage.setItem("usuario", JSON.stringify({
+      nome: user.displayName,
+      email: user.email,
+      foto: user.photoURL
+    }));
+
+    window.location.href = "dashboard.html";
+  } catch (error) {
+    alert("Erro ao fazer login com Google.");
+  }
+});
