@@ -1,4 +1,4 @@
-# Dashboard de Produtos
+# Black Store
 
 Aplicação web que consome uma API REST para exibir produtos em um dashboard, desenvolvida com JavaScript moderno e organizada segundo um padrão inspirado em MVC (Model–View–Controller).
 
@@ -64,21 +64,44 @@ Essa abordagem melhora a legibilidade, manutenção e escalabilidade do código.
 ## Estrutura de Pastas
 
 ```bash
-📁 dashboard-produtos
- ┣ 📁 assets
- ┃ ┗ imagens e ícones
- ┣ 📁 css
- ┃ ┗ style.css
- ┣ 📁 js
- ┃ ┣ 📁 models
- ┃ ┃ ┗ productModel.js
- ┃ ┣ 📁 views
- ┃ ┃ ┗ productView.js
- ┃ ┣ 📁 controllers
- ┃ ┃ ┗ productController.js
- ┃ ┗ main.js
- ┣ index.html
- ┗ README.md
+📦 Black Store
+├── 📁 assets
+│   ├── 📁 icon
+│   ├── 📁 img
+│   └── 📁 js
+│       ├── 📁 config
+│       │   └── 📄 firebaseConfig.js
+│       │
+│       ├── 📁 controller
+│       │   ├── 📄 authController.js
+│       │   └── 📄 productController.js
+│       │
+│       ├── 📁 model
+│       │   ├── 📄 localStorageModel.js
+│       │   └── 📄 productModel.js
+│       │
+│       ├── 📁 service
+│       │   └── 📄 authService.js
+│       │
+│       └── 📁 view
+│           ├── 📄 authLogin.js
+│           ├── 📄 cadastro.js
+│           ├── 📄 produtosView.js
+│           └── 📄 rederProdutos.js
+│
+├── 📁 style
+│   ├── 📄 cadastro.css
+│   ├── 📄 dashbord.css
+│   ├── 📄 globais.css
+│   ├── 📄 responsividadeDashbord.css
+│   ├── 📄 responsividadeLoginECadastro.css
+│   └── 📄 style.css
+│
+├── 📄 cadastro.html
+├── 📄 dashboard.html
+├── 📄 index.html
+├── 📄 LICENSE
+└── 📄 README.md
 ````
  ## API Utilizada
 
