@@ -20,26 +20,41 @@ function rederDados(produtos){
             }
             
             divProduto.innerHTML = 
-                        `<div class="card-produto">
-                            <div class="img-produto">
+
+                        `<div class="card">
+
+                            <span class="discount">-30%</span>
+
+                            <button class="favorite">♡</button>
+
+                            <div class="card-image">
                                 <img src="${produto.imagemProduto}" alt="${produto.nomeProduto}">
                             </div>
 
-                            <div class="descricao-produto">
-                                <h3 class="title-produto">${produto.nomeProduto}</h3>
-                                <h4 class="preco">R$ ${produto.precoProduto}</h4>
+                            <div class="card-content">
+
+                                <span class="category">${produto.categoria}</span>
+
+                                <h3 class="title">${produto.nomeProduto}</h3>
+
+                                <div class="rating">
+                                    ★★★★☆ <span>(128)</span>
+                                </div>
+
+                                <div class="price">
+                                    <span class="current-price">R$ ${produto.precoProduto.toFixed(2).replace('.', ',')}</span>
+                                    <span class="old-price">R$ ${(produto.precoProduto * 1.3).toFixed(2).replace('.', ',')}</span>
+                                </div>
+
+                                <div class="buttons">
+                                    <button class="cart-btn">🛒</button>
+                                    <button class="buy-btn">Comprar agora</button>
+                                </div>
+
                             </div>
 
-                            <div class="botao">
-                                <button class="add-carrinho">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                Adicionar ao carrinho
-                                </button>
-                                <button class="comprar">
-                                Comprar agora
-                                </button>
-                            </div>
                         </div>`
+            
             
             sectionProdutos.appendChild(divProduto)
 
