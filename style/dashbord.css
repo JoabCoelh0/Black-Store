@@ -297,15 +297,17 @@ body{
 #anuncios {
     padding: 20px;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     overflow: hidden;
     margin: auto;
 }
 
 #anuncio {
     display: flex;
-    width: 500%; /* 2 imagens */
-    animation: slider 120s infinite;
+    height: 100%;
+    width: 400%;
+    
+    animation: slider 100s infinite;
 }
 
 .slid {
@@ -321,25 +323,26 @@ body{
 }
 
 @keyframes slider {
-    0%, 20% {
+    0%, 25% {
         transform: translateX(0);
     }
 
-    20%, 40% {
+    25%, 50% {
         transform: translateX(-50%);
     }
 
-    40%, 60% {
+    50%, 75% {
         transform: translateX(-100%);
     }
 
-    60%, 80% {
+    75%, 99% {
         transform: translateX(-150%);
-    }
+    } 
 
     100% {
-        transform: translateX(-200%);
+        transform: translateX(0);
     }
+
 }
 
 
