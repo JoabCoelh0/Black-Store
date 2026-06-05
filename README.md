@@ -1,119 +1,139 @@
-# Black Store
+# 🛒 Black Store
 
-Aplicação web que consome uma API REST para exibir produtos em um dashboard, desenvolvida com JavaScript moderno e organizada segundo um padrão inspirado em MVC (Model–View–Controller).
+Aplicação web de e-commerce desenvolvida com JavaScript puro, consumindo uma API REST e utilizando Firebase para autenticação de usuários. O projeto foi estruturado seguindo o padrão arquitetural MVC (Model–View–Controller).
 
----
-
-## Objetivo do Projeto
-
-Este projeto tem como objetivos principais:
-
-- Praticar o consumo de APIs REST
-- Aplicar JavaScript assíncrono com `async/await`
-- Organizar a manipulação do DOM de forma estruturada
-- Utilizar separação de responsabilidades baseada no padrão MVC
-- Desenvolver um projeto adequado para portfólio profissional
+> Projeto desenvolvido para fins de aprendizado e portfólio.
 
 ---
 
-## Arquitetura (MVC)
+## 🔗 Demo
 
-O projeto utiliza uma organização inspirada no padrão MVC, separando claramente as responsabilidades:
-
-- **Model**  
-  Responsável pela comunicação com a API e pelas regras de negócio.
-
-- **View**  
-  Responsável pela renderização dos dados na interface e manipulação do DOM.
-
-- **Controller**  
-  Responsável por intermediar a comunicação entre Model e View.
-
-Essa abordagem melhora a legibilidade, manutenção e escalabilidade do código.
+👉 [Acessar o projeto online](https://joabcoelh0.github.io/Black-Store/dashboard.html)
 
 ---
 
-## Funcionalidades
+## 📸 Preview
 
-- Consumo de dados da Fake Store API  
-- Listagem dinâmica de produtos  
-- Exibição de informações como imagem, título, preço e descrição  
-- Organização do código em camadas (Model, View e Controller)  
-- Tratamento de erros em requisições assíncronas  
-- Interface organizada em formato de dashboard  
+> *(Adicione aqui um print ou GIF do projeto rodando)*
 
 ---
 
-## Tecnologias Utilizadas
+## 🎯 Objetivo
 
-- HTML5  
-- CSS3  
-- JavaScript (ES6+)  
-- Fetch API  
-- API REST  
+Praticar e demonstrar os seguintes conceitos:
 
-### Conceitos aplicados
-- `async / await`  
-- `try / catch`  
-- MVC (Model–View–Controller)  
-- Manipulação do DOM  
-- Modularização de código  
+- Consumo de APIs REST com JavaScript assíncrono
+- Arquitetura MVC em projetos front-end
+- Autenticação de usuários com Firebase Auth
+- Organização e modularização de código
+- Responsividade com CSS puro
 
 ---
 
-## Estrutura de Pastas
+## ✨ Funcionalidades
 
-```bash
+- [x] Cadastro e login de usuários via Firebase Authentication
+- [x] Listagem dinâmica de produtos consumidos da Fake Store API
+- [x] Filtragem de produtos por categoria
+- [x] Slider de banners na página principal
+- [x] Interface responsiva (mobile e desktop)
+- [x] Código organizado no padrão MVC
+
+---
+
+## 🏗️ Arquitetura MVC
+
+O projeto separa as responsabilidades em três camadas:
+
+| Camada | Responsabilidade |
+|--------|-----------------|
+| **Model** | Comunicação com a API e regras de negócio |
+| **View** | Renderização dos dados e manipulação do DOM |
+| **Controller** | Intermediação entre Model e View |
+
+---
+
+## 🗂️ Estrutura de Pastas
+
+```
 📦 Black Store
 ├── 📁 assets
-│   ├── 📁 icon
-│   ├── 📁 img
-│   └── 📁 js
-│       ├── 📁 config
-│       │   └── 📄 firebaseConfig.js
-│       │
-│       ├── 📁 controller
-│       │   ├── 📄 authController.js
-│       │   └── 📄 productController.js
-│       │
-│       ├── 📁 model
-│       │   ├── 📄 localStorageModel.js
-│       │   └── 📄 productModel.js
-│       │
-│       ├── 📁 service
-│       │   └── 📄 authService.js
-│       │
-│       └── 📁 view
-│           ├── 📄 authLogin.js
-│           ├── 📄 cadastro.js
-│           ├── 📄 produtosView.js
-│           └── 📄 rederProdutos.js
-│
+│   └── 📁 img
+├── 📁 js
+│   ├── 📁 config
+│   │   └── 📄 firebaseConfig.js
+│   ├── 📁 controller
+│   │   ├── 📄 authController.js
+│   │   └── 📄 productController.js
+│   ├── 📁 model
+│   │   ├── 📄 localStorageModel.js
+│   │   └── 📄 productModel.js
+│   ├── 📁 service
+│   │   └── 📄 authService.js
+│   └── 📁 view
+│       ├── 📄 authLogin.js
+│       ├── 📄 cadastro.js
+│       ├── 📄 produtosView.js
+│       └── 📄 renderProdutos.js
 ├── 📁 style
-│   ├── 📄 cadastro.css
-│   ├── 📄 dashbord.css
 │   ├── 📄 globais.css
-│   ├── 📄 responsividadeDashbord.css
-│   ├── 📄 responsividadeLoginECadastro.css
-│   └── 📄 style.css
-│
+│   ├── 📄 dashboard.css
+│   ├── 📄 cadastro.css
+│   ├── 📄 responsividadeDashboard.css
+│   └── 📄 responsividadeLoginECadastro.css
+├── 📄 index.html
 ├── 📄 cadastro.html
 ├── 📄 dashboard.html
-├── 📄 index.html
-├── 📄 LICENSE
 └── 📄 README.md
-````
- ## API Utilizada
-
-- **Nome:** Fake Store API  
-- **URL:** https://fakestoreapi.com  
-- **Descrição:** API pública que simula dados de produtos de um e-commerce para fins educacionais.
+```
 
 ---
 
-## Como Executar o Projeto
+## 🛠️ Tecnologias
+
+- **HTML5** — Estrutura das páginas
+- **CSS3** — Estilização e responsividade
+- **JavaScript ES6+** — Lógica da aplicação
+- **Firebase Authentication** — Cadastro e login de usuários
+- **Fetch API** — Requisições HTTP
+- **[Fake Store API](https://fakestoreapi.com)** — Dados de produtos
+
+### Conceitos aplicados
+
+- `async / await` e `try / catch`
+- Padrão MVC
+- Manipulação do DOM
+- Modularização de código
+- LocalStorage
+
+---
+
+## 🚀 Como executar localmente
 
 ```bash
-git clone https://github.com/seu-usuario/dashboard-produtos
-cd dashboard-produtos
+# Clone o repositório
+git clone https://github.com/JoabCoelh0/Black-Store.git
 
+# Acesse a pasta
+cd Black-Store
+
+# Abra o arquivo index.html no navegador
+# (recomendado usar a extensão Live Server no VS Code)
+```
+
+> ⚠️ Para que a autenticação funcione, é necessário configurar suas próprias credenciais do Firebase no arquivo `js/config/firebaseConfig.js`.
+
+---
+
+## 👨‍💻 Autor
+
+**Joab Coelho**
+
+[![GitHub](https://img.shields.io/badge/GitHub-JoabCoelh0-black?style=flat&logo=github)](https://github.com/JoabCoelh0)
+[![Email](https://img.shields.io/badge/Email-Joabcoelho033@gmail.com-red?style=flat&logo=gmail)](mailto:Joabcoelho033@gmail.com)
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
