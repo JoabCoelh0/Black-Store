@@ -14,7 +14,8 @@ Aplicação web de e-commerce desenvolvida com JavaScript puro, consumindo uma A
 
 ## 📸 Preview
 
-> *(Adicione aqui um print ou GIF do projeto rodando)*
+> <img width="1907" height="930" alt="image" src="https://github.com/user-attachments/assets/f7901ffd-4f06-4ab9-be30-15f7c7a11c42" />
+
 
 ---
 
