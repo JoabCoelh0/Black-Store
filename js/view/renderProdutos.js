@@ -59,6 +59,7 @@ function rederDados(produtos){
             sectionProdutos.appendChild(divProduto)
 
         }
+        
     } catch (error) {
         console.error(`${error.message}`);
         
