@@ -102,7 +102,7 @@ function filtroCategorias(){
 }
 
 
-
+/*
 
 document.querySelectorAll('.categoria').forEach(div => {
   div.addEventListener('click', (e) => {
@@ -111,11 +111,10 @@ document.querySelectorAll('.categoria').forEach(div => {
   });
 });
  
-/*
+*/
 
 const btnAplicarFiltro = document.querySelector(".aplicarFiltro")
 btnAplicarFiltro.addEventListener('click',(e)=>{
     e.preventDefault()
     filtroCategorias()
 })
-*/
